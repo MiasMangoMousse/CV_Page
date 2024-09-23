@@ -24,7 +24,7 @@ function AboutMe() {
 
     return (
         <div id="aboutMe">
-            <div className="aboutMeDescription">
+            <div className="aboutMeDescription whiteShadowBox">
                 <div className="aboutMeTitle">
                     <h1>About Me</h1>
                 </div>

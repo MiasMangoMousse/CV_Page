@@ -60,7 +60,7 @@ function Map() {
     }, [map, mapStyle]);
 
     return (
-        <div className="map whiteShadow">
+        <div className="map whiteShadowFilter">
             <div id="mapContainer" />
             <div className="mapButtons">
                 <button className="retroShadowButton"

@@ -69,7 +69,7 @@ const Project = ({ projectLink, codeLink, projectName, projectDescription, proje
         <div className="projectContainer">
             {!projectClosed && (
                 <div ref={projectRef} id={"project"} className={`${layoutLeft ? "projectLayoutLeft" : "projectLayoutRight"} ${projectMinimized ? "projectMinimized" : ""}`}>
-                    <div className="projectWindow whiteShadow">
+                    <div className="projectWindow whiteShadowFilter">
                         <div ref={projectWindowBarRef} className="projectWindowBar">
                             <div className="projectWindowButtonsFront">
                                 <ArrowClockwise onClick={reloadProject} alt="Reload window" className="projectWindowButtonPhosphor" />
@@ -96,7 +96,7 @@ const Project = ({ projectLink, codeLink, projectName, projectDescription, proje
                             )}
                         </div>
                     </div>
-                    <div ref={projectDescriptionRef} className="projectDescription whiteShadow">
+                    <div ref={projectDescriptionRef} className="projectDescription whiteShadowBox">
                         <div className="descriptionText">
                             <h1>{projectName}</h1>
                             {isRecursiveLoad ? (
@@ -121,7 +121,7 @@ const Project = ({ projectLink, codeLink, projectName, projectDescription, proje
                 </div>
             )}
             {projectClosed && (
-                <div className="projectShortcut whiteShadow">
+                <div className="projectShortcut whiteShadowFilter">
                     <div onClick={openProject} className="projectIcon">
                         {projectIcon}
                     </div>

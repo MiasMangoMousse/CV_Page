@@ -1,5 +1,5 @@
 import './Profile.css'
-import ProfilePhoto from './assets/round-photo-1024.png';
+import ProfilePhoto from './assets/round-photo-1024.webp';
 import PropTypes from "prop-types";
 import { HandWaving, GraduationCap, Flask, MagnifyingGlass } from "@phosphor-icons/react";
 import {useLayoutEffect, useState} from "react";
@@ -17,7 +17,7 @@ function Profile({backgroundSize}) {
 
   return (
       <div id="profile">
-          <div className="nameAndPicture whiteShadow">
+          <div className="nameAndPicture whiteShadowFilter">
               <div className="profileText" style={{gap: backgroundSize/4*2+'px'}}>
                   <div className={"profileTextLarge"} style={{fontSize: 'clamp(2rem, '+backgroundSize * 2+'px, 14vw)', lineHeight: 3*backgroundSize+'px', paddingTop: backgroundSize/1.8+(25*(backgroundSize-(size[1]/25)))+'px'}}>
                       <span>Hi, I'm Mia!</span>
