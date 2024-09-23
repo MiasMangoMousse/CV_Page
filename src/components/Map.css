@@ -1,0 +1,38 @@
+.map {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#mapContainer{
+    width: 100%;
+    height: 80vh;
+    border-radius: 1vw;
+}
+
+.mapButtons {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: left;
+    gap: 1vh;
+}
+
+.mapButtons button {
+    height: 4vh;
+    flex-grow: 1;
+    margin-top: 1vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.mapButtonIcon{
+    height: 80%;
+    width: auto;
+    margin-right: 1vh;
+    margin-left: 1vh;
+}

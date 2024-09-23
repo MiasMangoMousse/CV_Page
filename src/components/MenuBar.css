@@ -1,0 +1,33 @@
+.linksTop{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 2vw;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99;
+    background-color: var(--menuBackgroundColor);
+}
+
+.linksTop a{
+    font-family: 'Averia Serif Libre', sans-serif;
+    font-weight: 700;
+    line-height: 4vh;
+    font-size: 2vh;
+    text-decoration:underline;
+    text-decoration-style: dashed;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    color: var(--textColor1);
+}
+
+@media only screen and (min-width: 1040px) {
+
+    .linksTop{
+        width: 97vw;
+        justify-content: right;
+        padding-right: 3vw;
+    }
+
+}

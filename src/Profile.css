@@ -1,0 +1,70 @@
+#profile{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-evenly;
+}
+
+.nameAndPicture{
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 2vw;
+}
+
+.profileTextLarge{
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  vertical-align: center;
+  align-items: center;
+  gap: 1.5vh;
+}
+
+.profileText{
+  display: flex;
+  flex-direction: column;
+  font-family: 'Averia Serif Libre', serif;
+  font-weight: 300;
+  color: var(--textColor2);
+  text-align: center;
+}
+
+
+.profilePhoto {
+  position: relative;
+  display: inline-block;
+  padding: 2vh;
+}
+
+.profilePhoto img{
+  border-radius: 50%;
+  outline: dashed var(--textColor2) 0.5vh;
+}
+
+.profilePhoto img {
+  max-width: 40vw;
+  max-height: 40vh;
+  width: auto;
+  height: auto;
+  display: flex;
+}
+
+.profileTextSmall div{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1vh;
+}
+
+@media only screen and (min-width: 1040px) {
+  .nameAndPicture{
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .profileTextSmall div{
+    justify-content: right;
+  }
+}

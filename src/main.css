@@ -1,0 +1,51 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --backgroundLineHueDeg: 20;
+
+  --backgroundColor: #fdfaf4;
+  --menuBackgroundColor: #fdfaf4;
+  --windowBarBackgroundColor: #fdfaf4;
+  --varShadowColorContent: #fdfaf4;
+
+  --descriptionBackgroundColor: rgb(252, 249, 243);
+  --varShadowColorDescriptions: rgba(33, 33, 33, 0.4);
+
+  --textColor1: #546b2f;
+  --textColor2: #854221;
+  --textColor3: #000101;
+  --buttonColor1: #94b858;
+  --buttonColor2: #75973c;
+  --buttonColor3: #547224;
+  --buttonTextColor: #ffffff;
+  --windowColor: #94b858;
+  --tagColor: #99b450;
+}
+
+body,html {
+  margin: 0;
+  padding: 0;
+  background-color: var(--backgroundColor);
+  overflow-x: hidden;
+}
+
+.background{
+  background-image: url('./assets/bg2.svg');
+  background-repeat: repeat;
+  filter: hue-rotate(calc(var(--backgroundLineHueDeg) * 1deg));
+}
+
+.notBackground{
+  filter: hue-rotate(calc(var(--backgroundLineHueDeg) * -1deg));
+}
+
+.whiteShadow{
+  filter: drop-shadow(0px 0px 3px var(--varShadowColorContent)) drop-shadow(0px 0px 4px var(--varShadowColorContent)) drop-shadow(0px 0px 5px var(--varShadowColorContent)) drop-shadow(0px 0px 6px var(--varShadowColorContent)) drop-shadow(0px 0px 9px var(--varShadowColorContent));
+}

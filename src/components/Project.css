@@ -1,0 +1,222 @@
+#project {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    height: 85vh;
+    padding: 10vh 5vw 5vh 5vw;
+    gap: 3vh;
+}
+
+#project.projectMinimized {
+    height: calc(32px + 2vh);
+}
+
+.projectShortcut {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh;
+    align-self: center;
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 3vh;
+    color: var(--textColor2);
+}
+
+.projectShortcut * {
+    cursor: pointer;
+    margin-top: 0;
+}
+
+.projectShortcut *:not(h3) {
+    height: 6vh;
+    width: auto;
+}
+
+.projectTags {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: right;
+    padding: 0.2em;
+    gap: 0.5em;
+}
+
+.projectTag {
+    border-radius: 9999px;
+    background-color: var(--tagColor);
+    padding: 0.2em 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projectTag a {
+    text-decoration: none;
+    display: flex;
+    height: 100%;
+    width: fit-content;
+    justify-content: center;
+}
+
+.projectTagIcon {
+    height: 100%;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    vertical-align: middle;
+}
+
+.projectWindowBarLock {
+    height: 80%;
+    width: auto;
+}
+
+.projectWindow {
+    height: 100%;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 1vw;
+    outline: solid var(--tagColor) 0.5vh;
+    background: var(--tagColor);
+}
+
+.projectWindowBar {
+    display: flex;
+    height: 32px;
+    padding: 1vh 0.5vw;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0.5vw;
+    align-items: center;
+    border-bottom: solid var(--tagColor) 4px;
+    overflow: hidden;
+    font-size: 19px;
+    color: var(--windowBarBackgroundColor);
+}
+
+.projectWindowButtonPhosphor{
+    color: var(--windowBarBackgroundColor);
+}
+
+.projectMinimized .projectWindowBar {
+    border-bottom: solid var(--tagColor) 0;
+}
+
+.projectWindowButtonsBack,
+.projectWindowButtonsFront {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    cursor: pointer;
+}
+
+.projectWindowButtonPhosphor {
+    height: 100%;
+    width: auto;
+}
+
+.projectWindowBarContent a {
+    color: var(--textColor1);
+    text-decoration: none;
+    box-sizing: border-box;
+    padding-left: 0.5vw;
+    padding-right: 2vw;
+    overflow: hidden;
+    font-family: 'Averia Serif Libre', serif;
+}
+
+.projectWindowBarContent {
+    height: 32px;
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 1;
+    align-items: center;
+    padding-left: 12px;
+    padding-top: 2px;
+    box-sizing: border-box;
+    background-color: var(--windowBarBackgroundColor);
+    border-radius: 9999px;
+    overflow: hidden;
+}
+
+.projectWindowContent {
+    height: 0;
+    flex-grow: 1;
+    flex-shrink: 1;
+    border-radius: 0 0 0.9vw 0.9vw;
+    overflow: hidden;
+}
+
+.projectAlt{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Averia Serif Libre', serif;
+    font-size: 6vh;
+    color: var(--textColor2);
+}
+
+.projectWindowContent iframe {
+    border: 0;
+    height: 133.34%;
+    width: 133.34%;
+    transform-origin: 0 0;
+    transform: scale(0.75);
+}
+
+.projectDescription {
+    height: fit-content;
+    flex-shrink: 0;
+    overflow: hidden;
+    max-height: 55vh;
+    width: 84vw;
+    padding: 2vh 3vw;
+    background-color: var(--descriptionBackgroundColor);
+    color: var(--textColor3);
+    border-radius: 1vw;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Overpass', sans-serif;
+}
+
+.projectMinimized .projectDescription {
+    max-height: calc(32px + 2vh);
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.projectDescription h1 {
+    font-family: 'Cutive', sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0;
+}
+
+@media only screen and (min-width: 1040px) {
+    #project {
+        flex-direction: row-reverse;
+        gap: 3vw;
+    }
+
+    #project.projectLayoutLeft {
+        flex-direction: row;
+    }
+
+    .projectWindowContent iframe {
+        border: 0;
+        height: 100%;
+        width: 100%;
+        transform: none;
+    }
+
+    .projectDescription {
+        width: 20vw;
+        padding: 2vh 1vw;
+    }
+}

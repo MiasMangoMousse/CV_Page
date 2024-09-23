@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="a" data-name="Layer_1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.38 26.38">
+  <defs>
+    <style>
+      .b {
+        stroke-dasharray: 1.86 1.86;
+      }
+
+      .b, .c {
+        fill: none;
+        stroke: #8dc63f;
+        stroke-miterlimit: 10;
+        stroke-width: .49px;
+      }
+    </style>
+  </defs>
+  <line class="c" x1=".25" y1="26.38" x2=".25" y2="25.4"/>
+  <line class="b" x1=".25" y1="23.54" x2=".25" y2="2.16"/>
+  <polyline class="c" points=".25 1.23 .25 .25 1.23 .25"/>
+  <line class="b" x1="3.09" y1=".25" x2="24.47" y2=".25"/>
+  <line class="c" x1="25.4" y1=".25" x2="26.38" y2=".25"/>
+</svg>

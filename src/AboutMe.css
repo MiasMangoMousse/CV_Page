@@ -1,0 +1,64 @@
+#aboutMe{
+    display: flex;
+    flex-direction: column;
+    min-height: 85vh;
+    padding: 10vh 5vw 10vh 5vw;
+    justify-content: center;
+    align-items: center;
+    gap: 2vh;
+}
+
+.aboutMeDescription{
+    width: 90vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    padding: 3vh 2vw 4vh 2vw;
+    border-radius: 2vw;
+    box-shadow: 0 0 3vh var(--varShadowColorDescriptions);
+    background-color: var(--descriptionBackgroundColor);
+    font-family: 'Overpass', sans-serif;
+    color: var(--textColor3);
+}
+
+.aboutMeTitle h1{
+    font-family: 'Cutive', sans-serif;
+    font-weight: 100;
+    font-size: 32px;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    margin: 0;
+}
+
+.aboutMeLinks{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1vw;
+    justify-content: center;
+}
+
+.aboutMeMap{
+    width: 90vw;
+    height: 50vh;
+    display: flex;
+}
+
+@media only screen and (min-width: 1040px) {
+    #aboutMe{
+        flex-direction: row;
+        vertical-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 2vw;
+    }
+
+    .aboutMeMap {
+        width: 40vw;
+        height: 70vh;
+    }
+
+    .aboutMeDescription {
+        width: 35vw;
+    }
+}
