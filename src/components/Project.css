@@ -78,7 +78,8 @@
     display: flex;
     flex-direction: column;
     border-radius: 1vw;
-    outline: solid var(--tagColor) 0.5vh;
+    outline: solid var(--tagColor) 0.6vh;
+    outline-offset: -1px;
     background: var(--tagColor);
 }
 

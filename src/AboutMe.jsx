@@ -43,11 +43,11 @@ function AboutMe() {
                         </a>
                         {showToast && <div className={`${fadeToast ? "toastFade" : ""} toast`}>Copied!</div>}
                     </div>
-                    <a href="https://www.linkedin.com/in/mia-m-32567a100/" className="retroShadowButton" role="button">
+                    <a href="" className="retroShadowButton" role="button">
                         <LinkedinLogo size="1.4em" alt="LinkedIn logo" />
                         LinkedIn
                     </a>
-                    <a href="https://www.linkedin.com/in/mia-m-32567a100/" className="retroShadowButton" role="button">
+                    <a href="" className="retroShadowButton" role="button">
                         <ReadCvLogo size="1.4em" alt="Document icon" />
                             Resume
                     </a>
