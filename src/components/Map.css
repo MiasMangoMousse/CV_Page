@@ -36,3 +36,11 @@
     margin-right: 1vh;
     margin-left: 1vh;
 }
+
+.marker{
+    background-image: url('../assets/map-pin.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30px;
+    width: 30px;
+}

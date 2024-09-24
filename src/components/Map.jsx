@@ -1,8 +1,7 @@
 import './Map.css'
 import 'mapbox-gl/dist/mapbox-gl.css';
-import MapPin from '../assets/map-pin.svg';
 
-import { useEffect, useState } from 'react';
+import {useEffect, useRef, useState} from 'react';
 import mapboxgl from 'mapbox-gl';
 
 import { Star } from "@phosphor-icons/react";
@@ -10,24 +9,17 @@ import { Star } from "@phosphor-icons/react";
 mapboxgl.accessToken = 'pk.eyJ1IjoibWFuZ29tb3Vzc2UiLCJhIjoiY2x6bHRzZHFsMDZmeDJxcjRieXdvajV2cyJ9.UJwKZl7o748yJ8JFzC56uA';
 
 const studyMarkers = [
-    new mapboxgl.Marker({ element: createCustomMarker(MapPin), offset: [0, -15] }).setLngLat([103.84474903245534, 1.280365453214223]),
-    new mapboxgl.Marker({ element: createCustomMarker(MapPin), offset: [0, -15] }).setLngLat([-21.93420175870227, 64.14571514215304]),
-    new mapboxgl.Marker({ element: createCustomMarker(MapPin), offset: [0, -15] }).setLngLat([11.577470952794744, 48.14750903485899]),
-    new mapboxgl.Marker({ element: createCustomMarker(MapPin), offset: [0, -15]}).setLngLat([9.73485597838009, 47.415344848832966])
+    [103.84474903245534, 1.280365453214223],
+    [-21.93420175870227, 64.14571514215304],
+    [11.577470952794744, 48.14750903485899],
+    [9.73485597838009, 47.415344848832966]
 ];
-
-function createCustomMarker(icon) {
-    const markerElement = document.createElement('div');
-    markerElement.className = 'custom-marker';
-    markerElement.style.backgroundImage = `url(${icon})`;
-    markerElement.style.width = '30px';
-    markerElement.style.height = '30px';
-    return markerElement;
-}
 
 function Map() {
     const [mapStyle, setMapStyle] = useState('mapbox://styles/mangomousse/clzu2tw9e00ho01qo04ac0wtx');
     let [map, setMap] = useState(null);
+    const markersRef = useRef([]);  // To store the created markers
+
 
     useEffect(() => {
         const mapContainer = document.getElementById('mapContainer');
@@ -48,16 +40,38 @@ function Map() {
     }, []);
 
     useEffect(() => {
+        updateMarkers();
+    }, [mapStyle]);
+
+    const updateMarkers = () => {
         if (map) {
             map.setStyle(mapStyle);
-            if(mapStyle.includes('clzu2tw9e00ho01qo04ac0wtx')){
-                studyMarkers.forEach((marker) => marker.addTo(map));
-                studyMarkers.forEach((marker) => marker.addTo(map));
+            if (mapStyle.includes('clzu2tw9e00ho01qo04ac0wtx')) {
+                markersRef.current.forEach(marker => marker.addTo(map));
             } else {
-                studyMarkers.forEach((marker) => marker.remove());
+                markersRef.current.forEach(marker => marker.remove());
             }
         }
-    }, [map, mapStyle]);
+    }
+
+    const initializeMarkers = () => {
+        if (markersRef.current.length === 0 && map) {
+            studyMarkers.forEach((latLong) =>  {
+                const el = document.createElement('div');
+                el.className = 'marker';
+                const marker = new mapboxgl.Marker({ element: el, offset: [0, -15] })
+                    .setLngLat(latLong);
+                markersRef.current.push(marker);
+            });
+        }
+        updateMarkers();
+    };
+
+    useEffect(() => {
+        if (map) {
+            map.on('load', initializeMarkers);
+        }
+    }, [map]);
 
     return (
         <div className="map whiteShadowFilter">
