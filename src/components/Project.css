@@ -125,6 +125,7 @@
     padding-left: 0.5vw;
     padding-right: 2vw;
     overflow: hidden;
+    text-wrap: nowrap;
     font-family: 'Averia Serif Libre', serif;
 }
 
