@@ -20,6 +20,29 @@ function Map() {
     let [map, setMap] = useState(null);
     const markersRef = useRef([]);  // To store the created markers
 
+    const initializeMarkers = () => {
+        if (markersRef.current.length === 0 && map) {
+            studyMarkers.forEach((latLong) =>  {
+                const el = document.createElement('div');
+                el.className = 'marker';
+                const marker = new mapboxgl.Marker({ element: el, offset: [0, -15] })
+                    .setLngLat(latLong);
+                markersRef.current.push(marker);
+            });
+        }
+        updateMarkers();
+    };
+
+    const updateMarkers = () => {
+        if (map) {
+            map.setStyle(mapStyle);
+            if (mapStyle.includes('clzu2tw9e00ho01qo04ac0wtx')) {
+                markersRef.current.forEach(marker => marker.addTo(map));
+            } else {
+                markersRef.current.forEach(marker => marker.remove());
+            }
+        }
+    }
 
     useEffect(() => {
         const mapContainer = document.getElementById('mapContainer');
@@ -40,38 +63,14 @@ function Map() {
     }, []);
 
     useEffect(() => {
-        updateMarkers();
-    }, [mapStyle]);
-
-    const updateMarkers = () => {
-        if (map) {
-            map.setStyle(mapStyle);
-            if (mapStyle.includes('clzu2tw9e00ho01qo04ac0wtx')) {
-                markersRef.current.forEach(marker => marker.addTo(map));
-            } else {
-                markersRef.current.forEach(marker => marker.remove());
-            }
-        }
-    }
-
-    const initializeMarkers = () => {
-        if (markersRef.current.length === 0 && map) {
-            studyMarkers.forEach((latLong) =>  {
-                const el = document.createElement('div');
-                el.className = 'marker';
-                const marker = new mapboxgl.Marker({ element: el, offset: [0, -15] })
-                    .setLngLat(latLong);
-                markersRef.current.push(marker);
-            });
-        }
-        updateMarkers();
-    };
-
-    useEffect(() => {
         if (map) {
             map.on('load', initializeMarkers);
         }
     }, [map]);
+
+    useEffect(() => {
+        updateMarkers();
+    }, [mapStyle]);
 
     return (
         <div className="map whiteShadowFilter">

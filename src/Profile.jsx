@@ -1,7 +1,7 @@
 import './Profile.css'
 import ProfilePhoto from './assets/round-photo-1024.webp';
 import PropTypes from "prop-types";
-import { HandWaving, GraduationCap, Flask, MagnifyingGlass } from "@phosphor-icons/react";
+import { HandWaving, GraduationCap, BookOpenText, MagnifyingGlass } from "@phosphor-icons/react";
 import {useLayoutEffect, useState} from "react";
 
 function Profile({backgroundSize}) {
@@ -28,24 +28,15 @@ function Profile({backgroundSize}) {
                       lineHeight: 1 * backgroundSize + 'px'}}>
                       <div>
                           <span>Recent TUM graduate </span>
-                          <GraduationCap weight="duotone">
-                              <GraduationCap size="100%" color="white" weight="fill"/>
-                              <GraduationCap size="100%" color="white" weight="bold"/>
-                          </GraduationCap>
+                          <GraduationCap weight="duotone" />
                       </div>
                       <div>
                           <span>Information Systems Master </span>
-                          <Flask weight="duotone">
-                              <Flask size="100%" color="white" weight="fill"/>
-                              <Flask size="100%" color="white" weight="bold"/>
-                          </Flask>
+                          <BookOpenText weight="duotone" />
                       </div>
                       <div>
                           <span>Looking for work! </span>
-                          <MagnifyingGlass weight="duotone">
-                              <MagnifyingGlass size="100%" color="white" weight="fill"/>
-                              <MagnifyingGlass size="100%" color="white" weight="bold"/>
-                          </MagnifyingGlass>
+                          <MagnifyingGlass weight="duotone" />
                       </div>
                   </div>
               </div>
