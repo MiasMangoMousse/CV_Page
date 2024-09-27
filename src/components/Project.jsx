@@ -100,7 +100,7 @@ const Project = ({ projectLink, codeLink, projectName, projectDescription, proje
                             )}
                         </div>
                     </div>
-                    <div ref={projectDescriptionRef} className="projectDescription whiteShadowBox">
+                    <div ref={projectDescriptionRef} className="projectDescription">
                         <div className="descriptionText">
                             <h1>{projectName}</h1>
                             {isRecursiveLoad ? (
