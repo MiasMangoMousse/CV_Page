@@ -10,8 +10,8 @@
         fill: none;
         stroke: #8dc63f;
         stroke-miterlimit: 10;
-        stroke-width: 0.25px;
-        shape-rendering=optimizeSpeed;
+        stroke-width: 0.4px;
+        shape-rendering: geometricPrecision;
       }
     </style>
   </defs>

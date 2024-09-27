@@ -12,18 +12,15 @@ import ResumeProject from "./components/projects/ResumeProject.jsx";
 
 function Main() {
     const [backgroundSize, setBackgroundSize] = useState(Math.round(window.innerHeight / 25));
-    const [height, setHeight] = useState(Math.round(window.innerHeight / 25) - 1);
+    const [menuHeight, setMenuHeight] = useState(Math.round(window.innerHeight / 25) - 1);
     const [scrollPercent, setScrollPercent] = useState(0);
 
     useEffect(() => {
         const handleResize = () => {
             setBackgroundSize(Math.round(window.innerHeight / 25));
-            setHeight(Math.round(window.innerHeight / 25) - 1);
+            setMenuHeight(Math.round(window.innerHeight / 25) - 1);
         };
-
         window.addEventListener('resize', handleResize);
-
-        // Cleanup the event listener on component unmount
         return () => {
             window.removeEventListener('resize', handleResize);
         };
@@ -40,9 +37,9 @@ function Main() {
     });
 
     return (
-        <div className="background" style={{ backgroundSize: backgroundSize }}>
+        <div className="background" style={{ backgroundSize: backgroundSize*4 }}>
             <div className="notBackground">
-                <MenuBar height={height}/>
+                <MenuBar height={menuHeight}/>
                 <Profile backgroundSize = {backgroundSize} />
                 <AboutMe />
                 <GeoDartProject />
