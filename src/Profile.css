@@ -39,7 +39,8 @@
 
 .profilePhoto img{
   border-radius: 50%;
-  outline: dashed var(--textColor2) 0.5vh;
+  outline: solid var(--textColor2) 0.5vh;
+  outline-offset: -1px;
 }
 
 .profilePhoto img {

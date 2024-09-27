@@ -4,7 +4,7 @@
 import './Project.css'
 import PropTypes from 'prop-types';
 import {useEffect, useRef, useState} from 'react';
-import { ArrowsOut, ArrowsInSimple, ArrowClockwise, GithubLogo, Lock, X } from "@phosphor-icons/react";
+import { CornersOut, ArrowsInSimple, ArrowsOutSimple, ArrowClockwise, GithubLogo, Lock, X } from "@phosphor-icons/react";
 
 const Project = ({ projectLink, codeLink, projectName, projectDescription, projectDate, layoutLeft, projectIcon }) => {
     const projectRef = useRef(null);
@@ -79,9 +79,13 @@ const Project = ({ projectLink, codeLink, projectName, projectDescription, proje
                                 <a href={projectLink} target="_blank">{projectLink}</a>
                             </div>
                             <div className="projectWindowButtonsBack">
-                                <ArrowsInSimple className="projectWindowButtonPhosphor" onClick={handleMinimizeClick} alt="Minimize window" />
+                                {projectMinimized ? (
+                                    <ArrowsOutSimple className="projectWindowButtonPhosphor" onClick={handleMinimizeClick} alt="Minimize window" />
+                                ) : (
+                                    <ArrowsInSimple className="projectWindowButtonPhosphor" onClick={handleMinimizeClick} alt="Minimize window" />
+                                )}
                                 <a className="projectWindowButtonPhosphor" href={projectLink} target="_blank">
-                                    <ArrowsOut className="projectWindowButtonPhosphor" alt="Fullscreen" />
+                                    <CornersOut className="projectWindowButtonPhosphor" alt="Fullscreen" />
                                 </a>
                                 <X className="projectWindowButtonPhosphor" onClick={closeProject} src={X} alt="Close window" />
                             </div>
