@@ -19,8 +19,10 @@ function Profile({backgroundSize}) {
       <div id="profile">
           <div className="nameAndPicture whiteShadowFilter">
               <div className="profileText" style={{gap: backgroundSize/4*2+'px'}}>
-                  <div className={"profileTextLarge"} style={{fontSize: 'clamp(2rem, '+backgroundSize * 2+'px, 14vw)', lineHeight: 3*backgroundSize+'px', paddingTop: 10+backgroundSize/1.8+(25*(backgroundSize-(size[1]/25)))+'px'}}>
-                      <span>Hi, I'm Mia!</span>
+                  <div className={"profileTextLarge"} style={{fontSize: 'clamp(2rem, '+backgroundSize * 2+'px, 14vw)',
+                      lineHeight: 3*backgroundSize+'px',
+                      paddingTop: 10+backgroundSize/1.8+(25*(backgroundSize-(size[1]/25)))+'px'}}>
+                      <span>Hi, I&apos;m Mia!</span>
                       <HandWaving weight="duotone" />
                   </div>
                   <div className="profileTextSmall" style={{

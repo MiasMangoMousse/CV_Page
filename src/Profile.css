@@ -37,18 +37,15 @@
   padding: 2vh;
 }
 
-.profilePhoto img{
-  border-radius: 50%;
-  outline: solid var(--textColor2) 0.5vh;
-  outline-offset: -1px;
-}
-
 .profilePhoto img {
   max-width: 40vw;
   max-height: 40vh;
   width: auto;
   height: auto;
   display: flex;
+  border-radius: 50%;
+  outline: solid var(--textColor2) 0.5vh;
+  outline-offset: -2px;
 }
 
 .profileTextSmall div{
