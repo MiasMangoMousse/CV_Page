@@ -5,8 +5,8 @@ function ResumeProject() {
 
     return (
         <Project
-            projectLink={"https://cv-page-17z.pages.dev/"}
-            codeLink={"https://cv-page-17z.pages.dev"}
+            projectLink={"https://moosbrugger.io"}
+            codeLink={"https://github.com/MiasMangoMousse/CV_Page"}
             projectName={"CV Page"}
             projectDescription={"This website. A little meta."}
             projectDate={"2024"}
