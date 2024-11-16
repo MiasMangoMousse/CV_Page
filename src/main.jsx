@@ -37,7 +37,7 @@ function Main() {
     });
 
     return (
-        <div className="background" style={{ backgroundSize: backgroundSize*4 }}>
+        <div className="background" style={{ backgroundSize: backgroundSize }}>
             <div className="notBackground">
                 <MenuBar height={menuHeight}/>
                 <Profile backgroundSize = {backgroundSize} />

@@ -10,13 +10,13 @@
 
   --backgroundLineHueDeg: 20;
 
-  --backgroundColor: #fdfaf4;
-  --menuBackgroundColor: #fdfaf4;
+  --backgroundColor: #fdf9f0;
+  --menuBackgroundColor: #fdf9f0;
   --windowBarBackgroundColor: #fdfaf4;
-  --varShadowColorContent: rgba(252, 249, 247, 0.75);
-  --varShadowColorContentExtra: rgba(252, 249, 247, 1);
+  --varShadowColorContent: rgba(253, 249, 240, 0.75);
+  --varShadowColorContentExtra: rgba(253, 249, 240, 1);
 
-  --descriptionBackgroundColor: rgba(252, 249, 247, 0.75);
+  --descriptionBackgroundColor: rgba(253, 249, 240, 0.75);
   --varShadowColorDescriptions: rgba(33, 33, 33, 0.4);
 
   --textColor1: #546b2f;
@@ -41,14 +41,6 @@ body,html {
   background-image: url('assets/bg.svg');
   background-repeat: repeat;
   image-rendering: pixelated;
-}
-
-@media only screen and (min-height: 713px) {
-  .background{
-    background-image: url('assets/bg2.svg');
-    background-repeat: repeat;
-    image-rendering: pixelated;
-  }
 }
 
 .whiteShadowFilter{
