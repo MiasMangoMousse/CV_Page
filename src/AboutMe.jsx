@@ -29,12 +29,24 @@ function AboutMe() {
                     <h1>About Me</h1>
                 </div>
                 <div className="aboutMeText">
-                    Hi, I'm Mia Moosbrugger, a recent Master's graduate in Information Systems from TUM, fluent in both German and English, currently based in Austria but willing to relocate. I was fortunate enough to be able to study abroad in both Singapore and Iceland. My research theses have focused on the skills required by DevOps teams and the factors influencing human content moderation decision-making.
-
-                    I'm always up for a new challenge, whether it's related to project management, development, or data science. Outside of work, I love traveling, reading, playing Dungeons and Dragons with friends, and playing badminton.
-
-                    I'm excited to see where my journey takes me next!
+                    Hi, I&apos;m <span className="aboutMeTextBold"> Mia Moosbrugger</span>, a recent Master&apos;s graduate
+                    in
+                    <span className="aboutMeTextBold"> Information Systems </span>from TUM, fluent in both German and
+                    English, currently based in Austria but willing to relocate.
+                    <br/>
+                    I was fortunate enough to be able to study abroad in both Singapore and Iceland. My research
+                    theses have focused on the skills required by DevOps teams and
+                    the factors influencing human
+                    content moderation decision-making.
+                    <br/>
+                    I&apos;m always up for a new challenge, whether it&apos;s related to project management,
+                    development, or data science. Outside of work, I love traveling, reading, playing Dungeons and
+                    Dragons with friends, and playing badminton.
+                    <br/>
+                    <br/>
+                    <span className="aboutMeTextBold">I&apos;m excited to see where my journey takes me next!</span>
                 </div>
+
                 <div className="aboutMeLinks">
                     <div className="anchorToast">
                         <a onClick={handleEmailClick} href="mailto:mia.moosbr@gmail.com" className="retroShadowButton"

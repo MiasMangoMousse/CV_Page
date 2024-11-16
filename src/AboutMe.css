@@ -24,10 +24,20 @@
 .aboutMeTitle h1{
     font-family: 'Cutive', sans-serif;
     font-weight: 100;
-    font-size: 32px;
+    font-size: 2em;
     padding-top: 1vh;
     padding-bottom: 1vh;
     margin: 0;
+}
+
+
+.aboutMeText{
+    font-size: 1.1em;
+    font-weight: 300;
+}
+
+.aboutMeTextBold{
+    font-weight: 500;
 }
 
 .aboutMeLinks{
