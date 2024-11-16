@@ -1,26 +1,29 @@
 import './AboutMe.css'
 import './components/FancyButton.css'
 import Map from './components/Map.jsx'
-import {LinkedinLogo, PaperPlaneTilt, ReadCvLogo} from "@phosphor-icons/react";
+import {LinkedinLogo, PaperPlaneTilt} from "@phosphor-icons/react";
 import {useState} from "react";
 
 function AboutMe() {
     const [showToast, setShowToast] = useState(false);
     const [fadeToast, setFadeToast] = useState(false);
 
-    const handleEmailClick = () => {
-        navigator.clipboard.writeText("mia.moosbr@gmail.com");
-        setShowToast(true);
+    const handleEmailClick = async () => {
+        try {
+            await navigator.clipboard.writeText("email@example.com");
+            setShowToast(true);
 
-        setTimeout(() => {
-            setFadeToast(true);
             setTimeout(() => {
-                setShowToast(false);
-                setFadeToast(false);
-            }, 800);
-        }, 1200);
+                setFadeToast(true);
+                setTimeout(() => {
+                    setShowToast(false);
+                    setFadeToast(false);
+                }, 800);
+            }, 1200);
+        } catch (error) {
+            console.error("Failed to copy email to clipboard: ", error);
+        }
     };
-
 
     return (
         <div id="aboutMe">
