@@ -74,10 +74,8 @@
 
 .retroShadowButton:hover::before {
     bottom: -3px;
-    border-bottom: 4px solid var(--buttonColor2);
 }
 
 .retroShadowButton:hover::after {
     bottom: -6px;
-    border-bottom: 4px solid var(--buttonColor3);
 }

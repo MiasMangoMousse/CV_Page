@@ -1,5 +1,5 @@
 import './AboutMe.css'
-import './components/FancyButton.css'
+import './components/RetroShadowButton.css'
 import Map from './components/Map.jsx'
 import {LinkedinLogo, PaperPlaneTilt} from "@phosphor-icons/react";
 import {useState} from "react";
