@@ -183,6 +183,7 @@
     display: flex;
     flex-direction: column;
     font-family: 'Overpass', sans-serif;
+    font-size: 1.1em;
 }
 
 .projectMinimized .projectDescription {
@@ -194,7 +195,7 @@
 .projectDescription h1 {
     font-family: 'Cutive', sans-serif;
     font-weight: 100;
-    font-size: 32px;
+    font-size: 2em;
     padding-top: 1vh;
     padding-bottom: 1vh;
     margin: 0;

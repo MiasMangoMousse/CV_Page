@@ -19,7 +19,7 @@ function Profile({backgroundSize}) {
       <div id="profile">
           <div className="nameAndPicture whiteShadowFilter">
               <div className="profileText" style={{gap: backgroundSize/4*2+'px'}}>
-                  <div className={"profileTextLarge"} style={{fontSize: 'clamp(2rem, '+backgroundSize * 2+'px, 14vw)', lineHeight: 3*backgroundSize+'px', paddingTop: backgroundSize/1.8+(25*(backgroundSize-(size[1]/25)))+'px'}}>
+                  <div className={"profileTextLarge"} style={{fontSize: 'clamp(2rem, '+backgroundSize * 2+'px, 14vw)', lineHeight: 3*backgroundSize+'px', paddingTop: 10+backgroundSize/1.8+(25*(backgroundSize-(size[1]/25)))+'px'}}>
                       <span>Hi, I'm Mia!</span>
                       <HandWaving weight="duotone" />
                   </div>
@@ -28,15 +28,15 @@ function Profile({backgroundSize}) {
                       lineHeight: 1 * backgroundSize + 'px'}}>
                       <div>
                           <span>Recent TUM graduate </span>
-                          <GraduationCap weight="duotone" />
+                          <GraduationCap weight="duotone" style={{paddingRight: '0.6em'}} />
                       </div>
                       <div>
                           <span>Information Systems Master </span>
-                          <BookOpenText weight="duotone" />
+                          <BookOpenText weight="duotone" style={{paddingRight: '0.6em'}} />
                       </div>
                       <div>
                           <span>Looking for work! </span>
-                          <MagnifyingGlass weight="duotone" />
+                          <MagnifyingGlass weight="duotone" style={{paddingRight: '0.6em'}} />
                       </div>
                   </div>
               </div>
