@@ -37,19 +37,16 @@ function AboutMe() {
                 </div>
                 <div className="aboutMeLinks">
                     <div className="anchorToast">
-                        <a onClick={handleEmailClick} href="mailto:mia.moosbr@gmail.com" className="retroShadowButton" role="button">
-                            <PaperPlaneTilt size="1.4em" alt="Tilted paper plane icon" />
+                        <a onClick={handleEmailClick} href="mailto:mia.moosbr@gmail.com" className="retroShadowButton"
+                           role="button">
+                            <PaperPlaneTilt size="1.4em" alt="Tilted paper plane icon"/>
                             Email
                         </a>
                         {showToast && <div className={`${fadeToast ? "toastFade" : ""} toast`}>Copied!</div>}
                     </div>
-                    <a href="" className="retroShadowButton" role="button">
-                        <LinkedinLogo size="1.4em" alt="LinkedIn logo" />
+                    <a href="https://www.linkedin.com/in/mia-m-32567a100/" className="retroShadowButton" role="button">
+                        <LinkedinLogo size="1.4em" alt="LinkedIn logo"/>
                         LinkedIn
-                    </a>
-                    <a href="" className="retroShadowButton" role="button">
-                        <ReadCvLogo size="1.4em" alt="Document icon" />
-                            Resume
                     </a>
                 </div>
             </div>
