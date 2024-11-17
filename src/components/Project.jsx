@@ -111,7 +111,9 @@ const Project = ({ projectLink, codeLink, projectName, projectDescription, proje
                         </div>
                         <div className="projectDate projectTags">
                             <div className="descriptionDate projectTag">
-                                {projectDate}
+                                <span>
+                                    {projectDate}
+                                </span>
                             </div>
                             {codeLink && (
                                 <div className="descriptionCodeLink projectTag">
