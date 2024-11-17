@@ -78,12 +78,18 @@ function Map() {
             <div className="mapButtons">
                 <button className="retroShadowButton"
                         onClick={() => setMapStyle('mapbox://styles/mangomousse/clzu2tw9e00ho01qo04ac0wtx')}>
-                    <Star className="mapButtonIcon" weight={mapStyle.includes("clzu2tw9e00ho01qo04ac0wtx") ? "fill" : "regular"} color={mapStyle.includes("clzu2tw9e00ho01qo04ac0wtx") ? "hotpink" : "deeppink"} alt={"Countries I studied in"} />
+                    <Star className="mapButtonIcon"
+                          weight={mapStyle.includes("clzu2tw9e00ho01qo04ac0wtx") ? "fill" : "regular"}
+                          color={mapStyle.includes("clzu2tw9e00ho01qo04ac0wtx") ? "#F4E04C" : "#F4E04C"}
+                          alt={"Countries I studied in"} />
                     Countries I studied in
                 </button>
                 <button className="retroShadowButton"
                         onClick={() => setMapStyle('mapbox://styles/mangomousse/clzo7j1lm007j01pb87j0596m')}>
-                    <Star className="mapButtonIcon" weight={mapStyle.includes("clzo7j1lm007j01pb87j0596m") ? "fill" : "regular"} color={mapStyle.includes("clzo7j1lm007j01pb87j0596m") ? "lightgreen" : "seagreen"} alt={"Countries I traveled to"} />
+                    <Star className="mapButtonIcon"
+                          weight={mapStyle.includes("clzo7j1lm007j01pb87j0596m") ? "fill" : "regular"}
+                          color={mapStyle.includes("clzo7j1lm007j01pb87j0596m") ? "#4cf4d5" : "#4cf4d5"}
+                          alt={"Countries I traveled to"} />
                     Countries I traveled to
                 </button>
             </div>
