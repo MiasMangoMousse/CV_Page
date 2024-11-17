@@ -184,6 +184,7 @@
     flex-direction: column;
     font-family: 'Overpass', sans-serif;
     font-size: 1.1em;
+    font-weight: 300;
 }
 
 .projectMinimized .projectDescription {
