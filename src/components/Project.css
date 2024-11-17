@@ -208,6 +208,10 @@
     margin: 0;
 }
 
+.descriptionText{
+    padding-bottom: 0.5em;
+}
+
 @media only screen and (min-width: 1040px) {
     #project {
         flex-direction: row-reverse;
