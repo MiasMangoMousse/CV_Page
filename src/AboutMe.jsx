@@ -30,6 +30,7 @@ function AboutMe() {
             <div className="aboutMeDescription whiteShadowBox">
                 <div className="aboutMeTitle">
                     <h1>About Me</h1>
+                    <br />
                 </div>
                 <div className="aboutMeText">
                     Hi, I&apos;m <span className="aboutMeTextBold"> Mia Moosbrugger</span>, a recent Master&apos;s graduate
