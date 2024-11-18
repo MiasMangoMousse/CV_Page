@@ -10,7 +10,7 @@ function AboutMe() {
 
     const handleEmailClick = async () => {
         try {
-            await navigator.clipboard.writeText("email@example.com");
+            await navigator.clipboard.writeText("mia.moosbr@gmail.com");
             setShowToast(true);
 
             setTimeout(() => {
