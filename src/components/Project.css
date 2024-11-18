@@ -170,7 +170,7 @@
     align-items: center;
     font-family: 'Averia Serif Libre', serif;
     font-size: 6vh;
-    color: var(--textColor2);
+    color: var(--buttonTextColor);
 }
 
 .projectWindowContent iframe {
