@@ -1,0 +1,4 @@
+# Header configuration file for Cloudflare - https://developers.cloudflare.com/pages/configuration/headers/
+
+https://cv-page-17z.pages.dev/*
+  X-Robots-Tag: noindex
