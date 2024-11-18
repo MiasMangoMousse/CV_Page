@@ -137,6 +137,7 @@
     overflow: hidden;
     text-wrap: nowrap;
     font-family: 'Averia Serif Libre', serif;
+    clip-path: inset(0 8px 0 0 round 9999px);
 }
 
 .projectWindowBarContent {
