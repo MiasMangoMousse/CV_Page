@@ -52,7 +52,7 @@ function Map() {
                 style: mapStyle,
                 scrollZoom: false,
                 center: [61.5, 31.5],
-                zoom: 1.3,
+                zoom: window.innerWidth < 1040 ? 1 : 1.4,
                 projection: 'globe',
             });
 
