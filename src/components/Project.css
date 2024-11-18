@@ -119,6 +119,10 @@
     cursor: pointer;
 }
 
+.projectWindowButtonsFront{
+    padding-right: 6px;
+}
+
 .projectWindowButtonPhosphor {
     height: 100%;
     width: auto;
