@@ -59,10 +59,10 @@ const Project = ({ projectLink, codeLink, projectName, projectDescription, proje
     };
 
     useEffect(() => {
-        if (window.frameElement){
+        if (window.frameElement && window.location.href.includes(projectLink)){
             setIsRecursiveLoad(true);
         }
-    }, []);
+    }, [projectLink]);
 
     return (
         <div className="projectContainer">
