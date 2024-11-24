@@ -41,6 +41,14 @@
     font-weight: 500;
 }
 
+.aboutMeTextCenter{
+    font-size: 1em;
+    font-weight: 100;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
 .aboutMeLinks{
     display: flex;
     flex-direction: row;

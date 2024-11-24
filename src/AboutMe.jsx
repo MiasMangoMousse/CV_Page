@@ -33,7 +33,8 @@ function AboutMe() {
                     <br />
                 </div>
                 <div className="aboutMeText">
-                    Hi, I&apos;m <span className="aboutMeTextBold"> Mia Moosbrugger</span>, a recent Master&apos;s graduate
+                    Hi, I&apos;m <span className="aboutMeTextBold"> Mia Moosbrugger</span>, a recent Master&apos;s
+                    graduate
                     in
                     <span className="aboutMeTextBold"> Information Systems </span>from TUM, fluent in both German and
                     English, currently based in Austria but willing to relocate.
@@ -49,6 +50,9 @@ function AboutMe() {
                     <br/>
                     <br/>
                     <span className="aboutMeTextBold">I&apos;m excited to see where my journey takes me next!</span>
+                    <br/>
+                    <br/>
+                    <span className="aboutMeTextCenter">Please email me for a copy of my CV or message me on LinkedIn.</span>
                 </div>
 
                 <div className="aboutMeLinks">
